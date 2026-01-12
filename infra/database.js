@@ -24,16 +24,18 @@ async function query(queryObject) {
 
     return result;
   } catch (error) {
+    console.error(error);
     throw error;
   } finally {
     await client.end();
   }
 }
-
-export default {
+const database = {
   query,
   getNewClient,
 };
+
+export default database;
 
 function getSSLValues() {
   if (process.env.POSTGRES_CA) {
