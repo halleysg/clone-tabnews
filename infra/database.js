@@ -23,11 +23,11 @@ async function query(queryObject) {
     const result = await client.query(queryObject);
 
     return result;
-  } catch (error) {
-    console.error(error);
-    throw error;
+  } catch (e) {
+    console.error(e);
+    throw e;
   } finally {
-    await client.end();
+    await client?.end();
   }
 }
 const database = {
