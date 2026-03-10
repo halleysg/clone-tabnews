@@ -38,7 +38,7 @@ describe("POST /api/v1/users/[username]", () => {
         id: resBody.id,
         username,
         email,
-        password,
+        password: resBody.password,
         created_at: resBody.created_at,
         updated_at: resBody.updated_at,
       });
@@ -79,7 +79,7 @@ describe("POST /api/v1/users/[username]", () => {
         id: resBody.id,
         username,
         email,
-        password,
+        password: resBody.password,
         created_at: resBody.created_at,
         updated_at: resBody.updated_at,
       });
